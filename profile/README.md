@@ -7,6 +7,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-3px--team-black?style=flat&logo=github)](https://github.com/3px-team)
 [![Project](https://img.shields.io/badge/Project-DGit-blue?style=flat&logo=git)](https://github.com/uzih05/DGIT)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)]()
 
 </div>
 
