@@ -197,13 +197,3 @@ dgit status
 프로젝트 사용 중 문제가 발생하면 [Issues](https://github.com/uzih05/DGIT/issues)에 문의해주세요.
 
 ---
-
-## 📞 연락처
-
-<div align="center">
-
-[![CLI Project](https://img.shields.io/badge/⌨️_CLI_Version-dgit--cli-blue?style=for-the-badge)](https://github.com/3px-team/dgit-cli)
-[![Desktop Project](https://img.shields.io/badge/🖥️_Desktop_GUI-dgit--desktop-green?style=for-the-badge)](https://github.com/3px-team/dgit-desktop)
-![Web Project](https://img.shields.io/badge/🌐_Web_Interface-dgit--web-orange?style=for-the-badge)
-
----
