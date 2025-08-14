@@ -1,199 +1,67 @@
-<div align="center">
+# 3pxTeam
 
-# 3px Team 🎨
+디자인 워크플로우를 혁신하는 도구를 만듭니다.
 
-**디자인 파일을 위한 버전 관리 도구를 개발하는 팀입니다**
+## 우리가 해결하는 문제
 
-[![GitHub](https://img.shields.io/badge/GitHub-3px--team-black?style=flat&logo=github)](https://github.com/3px-team)
-[![Project](https://img.shields.io/badge/Project-DGit-blue?style=flat&logo=git)](https://github.com/uzih05/DGIT)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)]()
+Git은 개발자에게는 완벽하지만, 디자이너에게는 복잡합니다. 수 GB에 달하는 PSD 파일, 바이너리 형태의 Sketch 파일, 레이어 구조가 복잡한 디자인 에셋들... 기존 버전 관리 시스템으로는 한계가 있었습니다.
 
-</div>
+**DGit**은 디자인 파일을 위해 처음부터 다시 설계된 버전 관리 시스템입니다.
 
----
+## 프로젝트
 
-## 🚀 프로젝트
+### 🚀 [DGit CLI](https://github.com/3pxTeam/DGIT-CLI)
+디자인 파일 전용 버전 관리의 핵심 엔진
+- Rust로 구현된 고성능 CLI 도구
+- LZ4 압축을 통한 효율적인 대용량 파일 처리
+- 레이어별 변경사항 추적 및 관리
 
-### DGit - 디자인 파일 버전 관리 시스템
-<div align="center">
-<!-- 프로젝트 아이콘 자리 -->
-<img src="assets/icon.png" width="200px" alt="DGit Logo"/>
-</div>
+### 🎨 [DGit macOS](https://github.com/3pxTeam/DGIT-MAC)
+아름다운 네이티브 macOS 경험
+- Electron 기반의 네이티브 macOS 인터페이스
+- 드래그 앤 드롭 지원
+- 시각적 커밋 히스토리 및 브랜치 관리
 
-디자인 파일(.psd, .ai) 전용 버전 관리 시스템
+## 지원하는 파일 형식
 
-- 🎯 **현재 상태**: CLI 기반 베타 버전 개발 완료
-- 📁 **지원 형식**: Adobe Photoshop, Illustrator 파일 메타데이터 분석
-- ⚙️ **기술**: Go, LZ4/Zstandard 압축 알고리즘
-- 🔗 **CLI 저장소**: [3px-team/dgit-cli](https://github.com/3px-team/dgit-cli)
-- 🖥️ **GUI 저장소**: [3px-team/dgit-desktop](https://github.com/3px-team/dgit-desktop)
-- 🌐 **Web 저장소**: 개발예정
----
+| Adobe | Sketch | Figma | 기타 |
+|-------|--------|-------|------|
+| `.psd` | `.sketch` | `.fig` | `.png` |
+| `.ai` | | `.figma` | `.jpg` |
+| `.xd` | | | `.svg` |
 
-## 🛠️ 설치 및 사용법
+## 왜 DGit인가?
 
-### 📋 필요 조건
-- Go 1.21 이상
-- macOS, Windows, 또는 Linux
+- **속도**: 기존 Git 대비 5배 빠른 대용량 파일 처리
+- **압축**: LZ4 알고리즘으로 평균 60% 용량 절약
+- **직관성**: 복잡한 Git 명령어 없이 간단한 워크플로우
+- **macOS 네이티브**: Mac 사용자를 위한 완벽한 통합
 
-### ⚡ 빠른 설치
-
-<table>
-<tr>
-<td width="50%">
-
-#### 1️⃣ 소스코드에서 빌드
-```bash
-# 저장소 클론
-git clone https://github.com/uzih05/DGIT.git
-cd DGIT
-
-# 빌드
-go build -o dgit
-
-# 전역 설치 (선택사항)
-sudo mv dgit /usr/local/bin/
-```
-
-</td>
-<td width="50%">
-
-#### 2️⃣ 설치 확인
-```bash
-dgit --help
-```
-
-**출력 예시:**
-```
-🎨 DGit - Design File Version Control
-Available Commands:
-  init     Initialize repository
-  add      Add files to staging
-  commit   Create new version
-  status   Check file status
-  log      View history
-  restore  Restore files
-```
-
-</td>
-</tr>
-</table>
-
-### 🎯 5분만에 시작하기
+## 시작하기
 
 ```bash
-# 1. 저장소 초기화
+# DGit CLI 설치
+curl -sSL https://install.dgit.dev | sh
+
+# 새 프로젝트 시작
 dgit init
-
-# 2. 디자인 파일 추가
-dgit add *.psd *.ai
-
-# 3. 첫 번째 버전 생성
-dgit commit -m "초기 디자인 파일"
-
-# 4. 상태 확인
-dgit status
+dgit add design.psd
+dgit commit -m "첫 번째 디자인 버전"
 ```
 
-### 📚 명령어 가이드
+[macOS GUI 다운로드](https://github.com/3pxTeam/DGIT-MAC/releases)에서 더 쉬운 시각적 인터페이스를 경험해보세요.
 
-| 명령어 | 📝 설명 | 💡 예시 |
-|--------|---------|---------|
-| `dgit init` | 저장소 초기화 | `dgit init` |
-| `dgit scan` | 디자인 파일 검색 | `dgit scan .` |
-| `dgit add` | 파일 스테이징 | `dgit add *.psd` |
-| `dgit commit` | 버전 생성 | `dgit commit -m "로고 업데이트"` |
-| `dgit status` | 상태 확인 | `dgit status` |
-| `dgit log` | 히스토리 조회 | `dgit log` |
-| `dgit restore` | 파일 복원 | `dgit restore v2 logo.psd` |
+## 커뮤니티
 
----
+- 💬 **이슈 & 토론**: [GitHub Issues](https://github.com/3pxTeam/DGIT-CLI/issues)
+- 📢 **업데이트**: [Releases](https://github.com/3pxTeam/DGIT-CLI/releases) 페이지 팔로우
+- 🔗 **피드백**: 실제 프로젝트에서 사용해보고 경험을 공유해주세요
 
-## 👥 팀
+## 기여하기
 
-<div align="center">
+DGit은 커뮤니티와 함께 만들어갑니다:
 
-<table>
-<tr>
-<td align="center" width="33%">
-<img src="https://github.com/uzih05.png" width="100px" style="border-radius: 50%"/><br>
-<b>지헌</b><br>
-<sub>🧑‍💻 팀장, 백엔드 개발</sub><br>
-<a href="https://github.com/uzih05">@uzih05</a><br>
-<code>Go</code> <code>Performance</code>
-</td>
-<td align="center" width="33%">
-<img src="https://github.com/uijin0817.png" width="100px" style="border-radius: 50%"/><br>
-<b>의진</b><br>
-<sub>🎨 프론트엔드 개발</sub><br>
-<a href="https://github.com/uijin0817">@uijin0817</a><br>
-<code>React</code> <code>UI/UX</code>
-</td>
-<td align="center" width="33%">
-<img src="https://github.com/Jihun0602.png" width="100px" style="border-radius: 50%"/><br>
-<b>지훈</b><br>
-<sub>💻 프론트엔드 개발</sub><br>
-<a href="https://github.com/Jihun0602">@Jihun0602</a><br>
-<code>React</code> <code>Web</code>
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-## 📊 개발 현황
-
-### ✅ 구현 완료
-- [x] **CLI 버전**: 터미널에서 명령어로 사용 가능
-- [x] **파일 분석**: PSD, AI 파일의 레이어, 크기, 색상 모드 추출
-- [x] **압축 시스템**: 디자인 파일 효율적 저장
-- [x] **기본 명령어**: `add`, `commit`, `status`, `log`, `restore`
-
-### 🚧 현재 개발 중
-- [ ] **데스크톱 GUI**: Electron 기반 그래픽 사용자 인터페이스
-- [ ] **웹 인터페이스**: 브라우저 기반 관리 도구
-
-### 📋 향후 개발 예정
-- [ ] **UI/UX 개선**: 사용자 친화적 인터페이스
-- [ ] **파일 형식 확장**: Sketch, Figma 지원
-- [ ] **협업 기능**: 서버 구축을 통한 팀 협업
-
----
-
-## 🛠️ 기술 스택
-
-<div align="center">
-
-**Backend**
-<br>
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Compression](https://img.shields.io/badge/LZ4_Zstd-FF6B35?style=for-the-badge)
-
-**Frontend**
-<br>
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Electron](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
-
-</div>
-
----
-
-## 📖 문서
-
-### 📁 지원 파일 형식
-
-| 형식 | 지원 수준 | 분석 가능한 메타데이터 |
-|------|-----------|----------------------|
-| 🔵 **Adobe Photoshop (.psd)** | ✅ 완전 지원 | 레이어, 크기, 색상 모드, 비트 뎁스 |
-| 🟠 **Adobe Illustrator (.ai)** | ✅ 완전 지원 | 아트보드, 레이어, 색상 공간 |
-| 🟡 **Sketch (.sketch)** | 🔶 기본 지원 | 파일 크기, 수정 시간 |
-| 🟢 **Figma (.fig)** | 🔶 기본 지원 | 파일 크기, 수정 시간 |
-
-### 🔧 문제 해결
-프로젝트 사용 중 문제가 발생하면 [Issues](https://github.com/uzih05/DGIT/issues)에 문의해주세요.
-
----
+- 🐛 **버그 리포트**: 문제를 발견하면 알려주세요
+- 💡 **기능 제안**: 필요한 기능이 있다면 제안해주세요  
+- 🔧 **코드 기여**: Pull Request로 직접 개발에 참여하세요
+- 📖 **문서 개선**: 더 나은 사용법 가이드를 만들어주세요
