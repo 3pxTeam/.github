@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="profile/assets/icon.png" alt="3pxTeam Logo" width="120" height="120">
+  <img src="assets/icon.png" alt="3pxTeam Logo" width="120" height="120">
   
   # 3pxTeam
 
