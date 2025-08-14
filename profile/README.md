@@ -1,6 +1,10 @@
-# 3pxTeam
+<div align="center">
+  <img src="profile/assets/icon.png" alt="3pxTeam Logo" width="120" height="120">
+  
+  # 3pxTeam
 
-디자인 워크플로우를 혁신하는 도구를 만듭니다.
+  디자인 워크플로우를 혁신하는 도구를 만듭니다.
+</div>
 
 ## 우리가 해결하는 문제
 
@@ -59,7 +63,7 @@ dgit commit -m "첫 번째 디자인 버전"
 
 ## 기여하기
 
-DGit은 커뮤니티와 함께 만들어갑니다:
+DGit은 디자인 커뮤니티와 함께 만들어갑니다:
 
 - 🐛 **버그 리포트**: 문제를 발견하면 알려주세요
 - 💡 **기능 제안**: 필요한 기능이 있다면 제안해주세요  
