@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.png" alt="DGIT Logo" width="120" height="120">
+  <img src="assets/icon.png" alt="3pxTeam Logo" width="120" height="120">
   
   # 3pxTeam
   디자인 워크플로우를 개선하는 도구를 만듭니다.
@@ -77,6 +77,7 @@ dgit status
 - 네이티브 macOS 스타일링
 
 ## 개발 현황
+
 현재 로컬 버전 관리에 중점을 두고 있으며, 향후 클라우드 협업 기능과 더 많은 파일 형식 지원을 계획하고 있습니다.
 
 ## 피드백 및 기여
